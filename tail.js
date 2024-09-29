@@ -10,7 +10,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(inputArray) {
-  let result = inputArray.splice(1);
+  let result = inputArray.slice(1);
   return result;
 };
 
@@ -24,3 +24,7 @@ assertEqual(result.length, 0);
 
 result = tail([]);
 assertEqual(result.length, 0);
+
+let newArray = ['TEST', 'LIGHTHOUSE', 'LABS'];
+tail(newArray);
+console.log(newArray);
