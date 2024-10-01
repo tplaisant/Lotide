@@ -35,8 +35,6 @@ const middle = function(input) {
     } else {      
       result.push(input[Math.floor(mid)]);
     }
-  } else {
-    return result;
   }
   return result;
 }
