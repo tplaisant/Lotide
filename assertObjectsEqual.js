@@ -1,4 +1,4 @@
-const eqArrays = function(actual, expected) {
+const eqArrays = function(actual, expected) { // Compare arrays
   if (actual.length === expected.length) {
     for (let j = 0; j < actual.length; j++) {
       if (actual[j] !== expected[j]) {
@@ -19,9 +19,8 @@ const eqObjects = function (object1, object2) {
   }
   return true; // If nothing is wrong, return 'true'
 };
-// FUNCTION IMPLEMENTATION
+
 const assertObjectsEqual = function (actual, expected) {
-  // Implement me!
   let thumbsUp = String.fromCodePoint(0x1F44D);
   let thumbsDown = String.fromCodePoint(0x1F44E);
   const inspect = require("util").inspect;
