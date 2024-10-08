@@ -11,11 +11,9 @@ const assertEqual = function(actual, expected) {
 
 const findKey = function(obj, cb) {
   for (let key in obj) { // Iterate through Obj
-    for (let element in obj[key]) { // Iterate through values (which should be inside another object)
       if (cb(obj[key])) {
         return key; // Return the first positive match
       }
-    }
   }
   return undefined;
 }
