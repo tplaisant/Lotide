@@ -1,18 +1,14 @@
-const assertEqual = require("../assertEqual");
-const tail = require("../tail");
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
-let result = tail(['Test', 'Lighthouse', 'Labs']);
-assertEqual(result.length, 2);
-assertEqual(result[0], 'Lighthouse');
-assertEqual(result[1], 'Labs');
-let other = tail([5, 6]);
-assertEqual(other[0], 6);
-
-result = tail(['Test']);
-assertEqual(result.length, 0);
-
-result = tail([]);
-assertEqual(result.length, 0);
-
-let newArray = ['TEST', 'LIGHTHOUSE', 'LABS'];
-tail(newArray);
+describe("#tail", () => {
+  it("returns 'Labs' for ['Test', 'Lighthouse', 'Labs']", () => {
+    assert.strictEqual(tail(['Test', 'Lighthouse', 'Labs']), 'Labs');
+  });
+  it("returns '6' for [5, 6]", () => {
+    assert.strictEqual(tail([5, 6]), 6);
+  });  
+  it("returns '4' for [1, 2, 4]", () => {
+    assert.strictEqual(tail([1, 2, 4]), 4);
+  });    
+})

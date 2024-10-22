@@ -1,5 +1,5 @@
 const tail = function(inputArray) {
-  let result = inputArray.slice(1);
+  let result = inputArray[inputArray.length - 1];
   return result;
 };
 
